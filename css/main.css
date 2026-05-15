@@ -1,0 +1,21 @@
+.night { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at bottom, #071a1a 0%, #000 100%); z-index: -1; }
+.night::after { content: ''; position: absolute; bottom: 0; width: 100%; height: 40%; background: linear-gradient(to top, rgba(27, 94, 32, 0.2), transparent); }
+.message-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2000; width: 100%; pointer-events: none; }
+.message-center h1 { color: #fff; font-family: 'Georgia', serif; font-size: 3.5rem; line-height: 1.2; text-shadow: 0 0 20px rgba(255, 235, 59, 0.8); animation: textFadeIn 3s ease-out forwards; }
+.message-center h1 span { font-size: 2.2rem; color: #ffda44; display: block; margin-top: 15px; }
+.sunflower { position: absolute; bottom: 0; display: flex; flex-direction: column; align-items: center; transform-origin: bottom center; opacity: 0; }
+.sunflower .flower-head { position: relative; width: 100px; height: 100px; z-index: 100; display: flex; justify-content: center; align-items: center; }
+.sunflower .flower-head .center-disc { position: absolute; width: 55px; height: 55px; background: radial-gradient(circle, #5d4037, #3e2723); border-radius: 50%; z-index: 50; box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), inset 0 0 10px #000; }
+.sunflower .petal { position: absolute; top: 50%; left: 50%; width: 20px; height: 70px; background: linear-gradient(to top, #ffeb3b, transparent); border-radius: 50% 50% 20% 20%; transform-origin: bottom center; }
+.sunflower .stem { width: 10px; background: linear-gradient(to bottom, #2e7d32, #0a1a08); position: relative; }
+.sunflower .stem .leaf { position: absolute; width: 45px; height: 25px; background: linear-gradient(to right, #1b5e20, #2e7d32); border-radius: 100% 0 100% 0; z-index: -1; }
+.sunflower .stem .leaf.leaf-1 { left: -40px; top: 30%; transform: rotate(-30deg); }
+.sunflower .stem .leaf.leaf-2 { right: -40px; top: 60%; transform: rotate(210deg); }
+.star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle var(--duration) infinite ease-in-out; }
+.grass { position: absolute; bottom: 0; width: 3px; background: linear-gradient(to top, #0a1a08, #1b5e20); border-radius: 100% 100% 0 0; transform-origin: bottom center; opacity: 0.6; animation: sway 4s ease-in-out infinite; }
+.firefly { position: absolute; width: 4px; height: 4px; background: #ffff00; border-radius: 50%; filter: drop-shadow(0 0 8px #ffff00); animation: drift var(--d) infinite ease-in-out; }
+@keyframes drift { 0%, 100% { transform: translate(0, 0); opacity: 0; } 50% { transform: translate(30px, -40px); opacity: 1; } }
+@keyframes twinkle { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+@keyframes textFadeIn { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+@keyframes grow-up { 0% { transform: scale(0); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes sway { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
