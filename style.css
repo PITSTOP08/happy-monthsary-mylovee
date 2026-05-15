@@ -1,0 +1,546 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+overflow-x:hidden;
+background:white;
+}
+
+
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(
+to right,
+#ffd3dd,
+#ffc6e6
+);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+position:relative;
+
+overflow:hidden;
+}
+
+
+.hero h1{
+
+font-size:70px;
+
+font-family:'Dancing Script',cursive;
+
+color:#9d5c63;
+
+margin-bottom:20px;
+
+z-index:2;
+}
+
+
+.hero p{
+
+font-size:20px;
+
+color:#6f5252;
+
+margin-bottom:25px;
+
+z-index:2;
+
+max-width:700px;
+}
+
+
+
+/* TYPING CURSOR */
+
+.cursor{
+
+font-weight:bold;
+
+animation:blink .8s infinite;
+
+}
+
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* WAVING / JUMPING EMOJIS */
+
+.emoji{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+font-size:30px;
+
+margin-bottom:30px;
+
+z-index:2;
+}
+
+
+.emoji span{
+
+display:inline-block;
+
+animation:bounce 1.5s infinite;
+}
+
+
+.emoji span:nth-child(1){
+animation-delay:.1s;
+}
+
+.emoji span:nth-child(2){
+animation-delay:.3s;
+}
+
+.emoji span:nth-child(3){
+animation-delay:.5s;
+}
+
+.emoji span:nth-child(4){
+animation-delay:.7s;
+}
+
+.emoji span:nth-child(5){
+animation-delay:.9s;
+}
+
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+}
+
+50%{
+
+transform:
+translateY(-18px)
+rotate(12deg);
+
+}
+
+}
+
+
+
+/* BUTTON */
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff7b88;
+
+color:white;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.2);
+
+z-index:2;
+}
+
+
+button:hover{
+
+transform:
+scale(1.1);
+
+background:#ff4d6d;
+
+}
+
+
+
+
+/* MEMORIES */
+
+.memories{
+
+padding:100px 50px;
+
+background:#ffd3ec;
+
+text-align:center;
+}
+
+
+.memories h2{
+
+font-size:55px;
+
+font-family:'Dancing Script',cursive;
+
+margin-bottom:50px;
+
+color:#8b4c5a;
+}
+
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+.gallery img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.5s;
+
+cursor:pointer;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.2);
+
+}
+
+
+.gallery img:hover{
+
+transform:
+translateY(-10px)
+scale(1.05);
+
+}
+
+
+
+
+/* MESSAGE SECTION */
+
+.message{
+
+padding:100px 20px;
+
+background:
+linear-gradient(
+90deg,
+#6974ff,
+#8d5fff
+);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.card{
+
+width:100%;
+
+max-width:850px;
+
+padding:50px;
+
+border-radius:30px;
+
+background:
+rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+color:white;
+
+text-align:center;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.25);
+
+}
+
+
+.card h2{
+
+font-size:50px;
+
+font-family:'Dancing Script',cursive;
+
+margin-bottom:25px;
+
+line-height:1.2;
+}
+
+
+.card p{
+
+line-height:2;
+
+font-size:18px;
+
+word-wrap:break-word;
+}
+
+
+
+/* HAPPY BIRTHDAY TEXT */
+
+.birthday-text{
+
+margin-top:35px;
+
+font-size:40px;
+
+font-family:'Dancing Script',cursive;
+
+color:gold;
+
+text-shadow:
+0 0 10px rgba(255,215,0,.6);
+
+}
+
+
+
+/* FINAL BUTTON */
+
+.love-btn{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:gold;
+
+color:#7a2551;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.25);
+
+}
+
+
+.love-btn:hover{
+
+transform:
+translateY(-5px)
+scale(1.08);
+
+box-shadow:
+0 12px 25px rgba(0,0,0,.3);
+
+}
+
+
+
+
+/* FALLING HEARTS */
+
+.heart{
+
+position:fixed;
+
+top:-50px;
+
+pointer-events:none;
+
+animation:
+fall linear forwards;
+
+z-index:1;
+
+}
+
+
+@keyframes fall{
+
+to{
+
+transform:
+translateY(120vh);
+
+}
+
+}
+
+
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+padding:0 10px;
+
+}
+
+.memories{
+
+padding:70px 20px;
+
+}
+
+.memories h2{
+
+font-size:40px;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.gallery img{
+
+height:220px;
+
+}
+
+.message{
+
+padding:50px 15px;
+
+}
+
+.card{
+
+padding:25px;
+
+border-radius:20px;
+
+}
+
+.card h2{
+
+font-size:34px;
+
+}
+
+.card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.birthday-text{
+
+font-size:30px;
+
+}
+
+.love-btn{
+
+width:100%;
+
+padding:14px;
+
+font-size:15px;
+
+}
+
+.emoji{
+
+font-size:24px;
+
+gap:10px;
+
+}
+
+}
